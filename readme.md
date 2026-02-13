@@ -19,7 +19,7 @@ A REST API for managing users and books with authentication and authorization.
 - JWT Authentication
 - bcrypt (password hashing)
 - cookie-parser
-- doten
+- dotenv
 
 # 📂 Project Structure
 
