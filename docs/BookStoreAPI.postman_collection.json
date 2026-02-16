@@ -1,0 +1,306 @@
+{
+  "info": {
+    "_postman_id": "8523b252-08bf-4231-84b0-ad4a1601abbc",
+    "name": "backed-module",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49601457",
+    "_collection_link": "https://go.postman.co/collection/49601457-8523b252-08bf-4231-84b0-ad4a1601abbc?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "user-register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Rahul",
+                  "type": "text",
+                  "uuid": "045cb393-3c93-421c-976e-05e34861c96b"
+                },
+                {
+                  "key": "email",
+                  "value": "test@gmail.com",
+                  "type": "text",
+                  "uuid": "5ac03fec-4af1-4f84-a2a7-4ae3dd6d3c7e"
+                },
+                {
+                  "key": "password",
+                  "value": "123",
+                  "type": "text",
+                  "uuid": "54165d4c-79b7-40a2-80c4-34b8106e0325"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:9000/api/v1/users/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user-login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"rahu@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9000/api/v1/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user-logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9000/api/v1/users/logout/:698c2d0c5b1799ae05c4183f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "logout",
+                ":698c2d0c5b1799ae05c4183f"
+              ],
+              "variable": [
+                {
+                  "key": "698c2d0c5b1799ae05c4183f",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update-user",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Ajay\",\r\n    \"email\": \"rahukr@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9000/api/v1/users/update/:698d5ae4bd1ea5c4a5c6c8fbid",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "update",
+                ":698d5ae4bd1ea5c4a5c6c8fbid"
+              ],
+              "variable": [
+                {
+                  "key": "698d5ae4bd1ea5c4a5c6c8fbid",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "admin-register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Admin Rahul\",\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"12345\",\r\n  \"adminKey\": \"rahul@123\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9000/api/v1/users/admin/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "admin",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "admin login",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "book",
+      "item": [
+        {
+          "name": "create-book",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"rich dad poor dad\",\r\n    \"author\":\"rahul kr\",\r\n    \"price\":999,\r\n    \"category\":\"fin\",\r\n    \"stock\":1,\r\n    \"description\":\"This is test book desc\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9000/api/v1/books/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "api",
+                "v1",
+                "books",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update-book",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"rich dad poor dad mom\",\r\n    \"author\":\"rahul kr\",\r\n    \"price\":999,\r\n    \"category\":\"fin\",\r\n    \"stock\":1,\r\n    \"description\":\"This is test book desc\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9000/api/v1/books/update/698c2d0c5b1799ae05c4183f",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "api",
+                "v1",
+                "books",
+                "update",
+                "698c2d0c5b1799ae05c4183f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete-book",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9000/api/v1/books/delete/698d6b3b5cbe85521e2f982b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9000",
+              "path": [
+                "api",
+                "v1",
+                "books",
+                "delete",
+                "698d6b3b5cbe85521e2f982b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllBooks",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "GetOne-book",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
